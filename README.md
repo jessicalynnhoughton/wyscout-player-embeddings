@@ -2,6 +2,7 @@
 European football player embedding analysis using LSTM on the publicly available Wyscout dataset. 
 
 This project was completed with equal contribution from Jessica Houghton and Sasha Yousefi, along with mentorship from Vitor Lopes, the Director of Applied Research at Real Madrid Club de Fútbol. 
+Please do not hesitate to contact @jessyhoughton@gmail.com and @sashayousefi@gmail.com for comments and questions about this project. 
 
 ## How Can Player Vectors Help Real Madrid and other football clubs?
 - Enhanced scouting capabilities: Real Madrid can specifically target
@@ -53,4 +54,13 @@ This objective will be approached through three methods:
 1. Training a simple logistic regression on player embeddings to predict player position
 2. Visualizing player embeddings and positions in both 2D and 3D using TSNE dimensional reduction.
 3. Identifying the most numerically similar players to those of interest through PCA dimensional reduction and Euclidean/Manhattan distance metrics.
+
+## Files
+### data_formatting.py
+This file preprocesses all game, player, and event data for the entire Wyscout dataset in the "processed" folder from [koenvo's wyscout-soccer-match-event-dataset](https://github.com/koenvo/wyscout-soccer-match-event-dataset). Once run, all games are stored in the processed_games folder with the data necessary to run the model. 
+### models.ipynb
+This file prepares the data for input into the LSTM and proceeds to train, save, and evaluate the LSTM model.
+### embeddings.ipynb
+This file extracts the player embeddings from the trained LSTM model and evaluates the embeddings using logistic regression, TSNE visualization, and PCA minimum distance analysis. 
+
 
