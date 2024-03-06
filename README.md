@@ -28,7 +28,7 @@ estimation of playing style can be achieved
 ## Approach 
 ### LSTM with Entity Embeddings
 - Keras LSTM model to predict the next subevent in the sequence of subevents
-  - Incorporates categorical variables (subevent and playerid) & numerical
+  - Incorporates categorical variables (subevent and player id) & numerical
 variables for additional context
   - LSTM performs sequential analysis and feature extraction on the
 combined inputs, enabling the model to capture complex patterns and
