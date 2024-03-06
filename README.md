@@ -12,7 +12,7 @@ lesser-known players who possess desired characteristics and potential,
 while saving money on transfer fees
 - Match preparation: Playing vectors can help identify characteristics and
 tendencies of opponents, allowing Real Madrid to tailor their strategy to
-exploit specific aspects of the other team’s game.
+exploit specific aspects of the other team’s game
 
 ## Goal
 ### Football clubs must optimize their budget by understanding their existing players and available players in the market
@@ -23,7 +23,7 @@ performed by each player on the field
 - Machine learning models can analyze the patterns and relationships
 between players to further enhance the objective measure of playing style
 - By utilizing this data-driven approach, a comprehensive and unbiased
-estimation of playing style can be achieved.
+estimation of playing style can be achieved
 
 ## Approach 
 ### LSTM with Entity Embeddings
@@ -36,7 +36,7 @@ dependencies within the game data.
 - Entity embeddings for the categorical variables are learned through model training
 by means of weight updates
   - Embedding layer learns to represent each player & subevent in a continuous
-vector space, capturing inherent relationships between categories.
+vector space, capturing inherent relationships between categories
 
 
 #### Inputs
