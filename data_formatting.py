@@ -106,7 +106,7 @@ class Wyscout:
         self.fill_height_weight()
         self.players['age'] = self.players['birthDate'].apply(self.age)
 
-        # Create a dictionary or player IDs to weight, height, age,
+        # create a dictionary or player IDs to weight, height, age,
         self.playerids2weight = dict(zip(self.players.wyId, self.players.weight))
         self.playerids2height = dict(zip(self.players.wyId, self.players.height))
         self.playerids2age = dict(zip(self.players.wyId, self.players.age))
@@ -528,7 +528,7 @@ class Game(Wyscout):
         # add any own goals, if necessary
         self.own_goals(teams)
 
-        # Compute the score difference for each team at every event
+        # compute the score difference for each team at every event
         self.get_score_diff(teams)
 
         # only keep the score_diff columns                                     
@@ -583,7 +583,7 @@ class Game(Wyscout):
         # 0 index subevents
         self.events = self.events.replace({'subEventId': self.wyscout.subeventID0index})
 
-        #0 index playerId (if original IDs are not necessary)
+        # 0 index playerId (if original IDs are not necessary)
         if not original_IDs:
             self.events = self.events.replace({'playerId': self.wyscout.playerID0index})
 
@@ -611,7 +611,7 @@ class Game(Wyscout):
         # normalize numerical features
         self.normalize()
 
-        #fill na values to 0 for now
+        # fill na values to 0 for now
         self.events = self.events.fillna(0)
 
 
