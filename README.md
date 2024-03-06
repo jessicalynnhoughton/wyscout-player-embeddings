@@ -32,7 +32,7 @@ estimation of playing style can be achieved
 variables for additional context
   - LSTM performs sequential analysis and feature extraction on the
 combined inputs, enabling the model to capture complex patterns and
-dependencies within the game data.
+dependencies within the game data
 - Entity embeddings for the categorical variables are learned through model training
 by means of weight updates
   - Embedding layer learns to represent each player & subevent in a continuous
@@ -42,7 +42,7 @@ vector space, capturing inherent relationships between categories
 #### Inputs
   - Categorical variables - subevents, players
   - Numerical variables - match period, weight, age, height, xy coordinates, tags
-(i.e. yellowcard, ball lost, counterattack).
+(i.e. yellowcard, ball lost, shot, short pass, counterattack).
 #### Data Structure
   - Use the previous 5 timesteps to predict the next event
 <img width="308" alt="Screen Shot 2024-02-26 at 1 27 11 PM" src="https://github.com/jessicalynnhoughton/wyscout-player-embeddings/assets/60555310/1178ed85-09f1-4ce4-9360-38eb039e66bd">
@@ -52,15 +52,15 @@ vector space, capturing inherent relationships between categories
 #### Primary Objective: Can player positions (goalie, defender, midfielder, forward) be accurately determined solely by the extracted player embeddings from the model?
 This objective will be approached through three methods:
 1. Training a simple logistic regression on player embeddings to predict player position
-2. Visualizing player embeddings and positions in both 2D and 3D using TSNE dimensional reduction.
-3. Identifying the most numerically similar players to those of interest through PCA dimensional reduction and Euclidean/Manhattan distance metrics.
+2. Visualizing player embeddings and positions in both 2D and 3D using TSNE dimensionality reduction
+3. Identifying the most numerically similar players to those of interest through PCA dimensionality reduction and Euclidean/Manhattan distance metrics
 
 ## Files
 ### data_formatting.py
-This file preprocesses all game, player, and event data for the entire Wyscout dataset in the "processed" folder from [koenvo's wyscout-soccer-match-event-dataset](https://github.com/koenvo/wyscout-soccer-match-event-dataset). Once run, all games are stored in the processed_games folder with the data necessary to run the model. 
+This file preprocesses all game, player, and event data for the entire Wyscout dataset in the "processed" folder from [koenvo's wyscout-soccer-match-event-dataset](https://github.com/koenvo/wyscout-soccer-match-event-dataset). Once run, all games are stored in the processed_games folder with the data necessary to run the model 
 ### models.ipynb
-This file prepares the data for input into the LSTM and proceeds to train, save, and evaluate the LSTM model.
+This file prepares the data for input into the LSTM and proceeds to train, save, and evaluate the LSTM model
 ### embeddings.ipynb
-This file extracts the player embeddings from the trained LSTM model and evaluates the embeddings using logistic regression, TSNE visualization, and PCA minimum distance analysis. 
+This file extracts the player embeddings from the trained LSTM model and evaluates the embeddings using logistic regression, TSNE visualization, and PCA minimum distance analysis 
 
 
